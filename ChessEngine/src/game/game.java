@@ -78,6 +78,9 @@ public class game {
 				System.out.println("incorrect");
 				input = scanner.nextLine();
 			}
+			
+			if (input.equals("exit")) 
+				continue;
 			fromX = params[0];
 			fromY = params[1];
 			toX = params[2];
