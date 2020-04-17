@@ -4,7 +4,6 @@
 package piece;
 
 import board.Board;
-import board.Square;
 
 /**
  * @author Chase
@@ -51,9 +50,14 @@ public class Piece {
 		return false;
 	}
 	
-	public Boolean getIsWhite()
+	public Boolean getIsWhite() { return isWhite; }
+	public int getX() { return x; }
+	public int getY() { return y; }
+	public boolean getHasMoved() { return hasMoved; }
+	public boolean equals(Piece checkPiece)
 	{
-		return isWhite;
-		
+		if(checkPiece.getX() == x && checkPiece.getY() == y && checkPiece.getHasMoved() == hasMoved && checkPiece.getIsWhite() == isWhite)
+			return true;
+		return true;
 	}
 }

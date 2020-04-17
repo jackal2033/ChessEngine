@@ -4,7 +4,7 @@ import piece.Piece;
 
 public class Square {
 	// which color square is W or B
-	private Boolean white;
+	private Boolean isWhite;
 	/*
 	 * X: x coordinate of square
 	 */
@@ -24,15 +24,11 @@ public class Square {
 		this.y= y;
 		
 		/*
-		 * Determines which color
+		 * Ternary operator to Determine which color
 		 * White: X and Y are both even or odd
 		 * Black: one cord is even, other is odd
 		 */
-		if (x%2 == y%2)
-			this.white= true;
-		else
-			this.white= false;
-		
+		this.isWhite = (x % 2 == y % 2)? true : false;
 		this.piece = piece;
 	}
 	
@@ -50,11 +46,16 @@ public class Square {
 	}
 	
 	public Boolean isWhite() {
-		return white;
+		return isWhite;
 	}
 	
 	public int getX() { return x;}
 	public int getY() { return y;}
 
 	public void setPiece(Piece piece) { this.piece = piece; }
+	
+	public String getCords()
+	{
+		return "X " + String.valueOf(x) + ", Y " + String.valueOf(y);
+	}
 }

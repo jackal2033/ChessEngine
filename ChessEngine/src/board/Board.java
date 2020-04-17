@@ -104,4 +104,8 @@ public class Board {
 		}
 	}
 
+	public void setPiece(int x, int y, Piece piece)
+	{
+		board[x][y].setPiece(piece);
+	}
 }
