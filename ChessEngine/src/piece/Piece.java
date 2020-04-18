@@ -35,11 +35,8 @@ public abstract class Piece {
 		if (canMove(board, toX, toY) == false)
 			return false;
 		//move before changing hasMoved
-		board.setPiece(toX, toY, this);
 		board.clearPiece(x,y);
-		
-		this.x = toX;
-		this.y = toY;
+		board.setPiece(toX, toY, this);
 		hasMoved = true;
 		
 		return true;
@@ -64,5 +61,10 @@ public abstract class Piece {
 		if(checkPiece.getX() == x && checkPiece.getY() == y && checkPiece.getHasMoved() == hasMoved && checkPiece.getIsWhite() == isWhite)
 			return true;
 		return true;
+	}
+	
+	public void kill(Board board)
+	{
+		board.clearPiece(x, y);
 	}
 }

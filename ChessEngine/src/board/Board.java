@@ -114,4 +114,11 @@ public class Board {
 	{
 		board[x][y].setPiece(null);
 	}
+	
+	public boolean checkPiece(int x, int y, Piece checkPiece)
+	{
+		if(checkPiece == null || board[x][y].getPiece() == null)
+			return false;
+		return board[x][y].getPiece().equals(checkPiece);
+	}
 }
