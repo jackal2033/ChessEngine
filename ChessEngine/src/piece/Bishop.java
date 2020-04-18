@@ -4,8 +4,8 @@ import board.Board;
 
 public class Bishop extends Piece {
 
-	public Bishop(Boolean isWhite,int x,int y) {
-		super(isWhite, x, y);
+	public Bishop(Boolean isWhite) {
+		super(isWhite);
 		// TODO Auto-generated constructor stub
 	}
 

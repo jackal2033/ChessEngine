@@ -22,8 +22,8 @@ public class PawnTests {
 		board.clearBoard();
 		
 		//create pieces
-		Pawn wPawn = new Pawn(true, 2, 1);
-		Pawn bPawn = new Pawn(false, 2, 6);
+		Pawn wPawn = new Pawn(true);
+		Pawn bPawn = new Pawn(false);
 		
 		//assign pieces to board
 		board.setPiece(2, 1, wPawn);
@@ -44,18 +44,18 @@ public class PawnTests {
 		System.out.println();
 		System.out.println("Testing moving forward one while impeded.");
 		//test moving forward while impeded
-		iPawn = new Pawn(true, 2 , 2);
-		board.setPiece(2, 2, iPawn);
+		iPawn = new Pawn(true);
+		board.setPiece(2, 3, iPawn);
 		result = wPawn.move(board, 0, 1);
 		output= (result)? "Failed" : "Passed";
 		System.out.println("White ... " + output);
 		
 
-		iPawn = new Pawn(true, 0 , 1);
-		board.setPiece(0, 1, iPawn);
+		iPawn = new Pawn(true);
+		board.setPiece(0, 1, new Pawn(true));
 		result = wPawn.move(board, 0, 1);
 		output= (result)? "Failed" : "Passed";
-		System.out.println("White ... " + output);
+		System.out.println("Black ... " + output);
 		
 		
 		//reset piece to default vales 

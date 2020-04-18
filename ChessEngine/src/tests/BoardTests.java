@@ -24,6 +24,8 @@ public class BoardTests {
 	private static Boolean verifyPieces(Board board) 
 	{ 
 		Boolean isWhite;
+		Board testBoard = new Board();
+		testBoard.clearBoard();
 		Piece piece;
 		Square square;
 		boolean rVal = true;
@@ -37,7 +39,7 @@ public class BoardTests {
 				isWhite= (y < 2)? false : true;
 				// tests pawns
 				if (y ==1 || y == 6)
-					checkPiece = new Pawn(isWhite, x, y);
+					checkPiece = new Pawn(isWhite);
 				
 				// tests squares without pieces
 				else if (y > 1 && y < 6)
@@ -45,19 +47,20 @@ public class BoardTests {
 				
 				//tests remaining pieces
 				else if (x == 0 || x == 7)
-					checkPiece = new Rook(isWhite, x, y);
+					checkPiece = new Rook(isWhite);
 				else if (x ==1 || x ==6)
-					checkPiece = new Knight(isWhite, x, y);
+					checkPiece = new Knight(isWhite);
 				else if (x == 2 || x == 5)
-					checkPiece = new Bishop(isWhite, x, y);
+					checkPiece = new Bishop(isWhite);
 				else if (x == 3)
-					checkPiece = new Queen(isWhite, x, y);
+					checkPiece = new Queen(isWhite);
 				else
-					checkPiece = new King(isWhite, x, y);
+					checkPiece = new King(isWhite);
 				try
 				{
 					if(piece != null && checkPiece != null)
 					{
+						testBoard.setPiece(x, y, checkPiece);
 						if (piece.equals(checkPiece) == false)
 						{
 							System.out.println(square.getCords() + " has failed piece check.");

@@ -30,6 +30,8 @@ public class Square {
 		 */
 		this.isWhite = (x % 2 == y % 2)? true : false;
 		this.piece = piece;
+		if (piece != null)
+			this.piece.setCords(x, y);
 	}
 	
 	

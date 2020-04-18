@@ -4,8 +4,8 @@ import board.Board;
 
 public class Rook extends Piece {
 
-	public Rook(Boolean isWhite,int x,int y) {
-		super(isWhite, x, y);
+	public Rook(Boolean isWhite) {
+		super(isWhite);
 		// TODO Auto-generated constructor stub
 	}
 	public String toString()

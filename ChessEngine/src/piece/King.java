@@ -4,8 +4,8 @@ import board.Board;
 
 public class King extends Piece {
 
-	public King(Boolean isWhite,int x,int y) {
-		super(isWhite, x, y);
+	public King(Boolean isWhite) {
+		super(isWhite);
 		// TODO Auto-generated constructor stub
 	}
 

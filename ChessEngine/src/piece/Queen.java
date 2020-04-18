@@ -4,8 +4,8 @@ import board.Board;
 
 public class Queen extends Piece {
 
-	public Queen(Boolean isWhite,int x,int y) {
-		super(isWhite, x, y);
+	public Queen(Boolean isWhite) {
+		super(isWhite);
 		// TODO Auto-generated constructor stub
 	}
 	public String toString()

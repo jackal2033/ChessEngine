@@ -4,8 +4,8 @@ import board.Board;
 
 public class Pawn extends Piece {
 
-	public Pawn(Boolean isWhite,int x,int y) {
-		super(isWhite, x, y);
+	public Pawn(Boolean isWhite) {
+		super(isWhite);
 	}
 	
 	public String toString()

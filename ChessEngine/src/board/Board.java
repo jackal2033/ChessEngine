@@ -28,19 +28,19 @@ public class Board {
 					 * Determines which Piece will be placed based on Y and X cords
 					 */
 					if (y == 1 || y == 6)
-						newPiece = new Pawn(isWhite, x, y);
+						newPiece = new Pawn(isWhite);
 					else
 					{
 						if (x == 0 || x == 7)
-							newPiece = new Rook(isWhite, x, y);
+							newPiece = new Rook(isWhite);
 						else if (x ==1 || x ==6)
-							newPiece = new Knight(isWhite, x, y);
+							newPiece = new Knight(isWhite);
 						else if (x == 2 || x == 5)
-							newPiece = new Bishop(isWhite, x, y);
+							newPiece = new Bishop(isWhite);
 						else if (x == 3)
-							newPiece = new Queen(isWhite, x, y);
+							newPiece = new Queen(isWhite);
 						else
-							newPiece = new King(isWhite, x, y);
+							newPiece = new King(isWhite);
 					}
 					
 					board[x][y] = new Square(x,y,newPiece);

@@ -21,11 +21,9 @@ public abstract class Piece {
 	 * @param x: x coord
 	 * @param y: y coord
 	 */
-	public Piece(Boolean isWhite,int x,int y)
+	public Piece(Boolean isWhite)
 	{
 		this.isWhite = isWhite;
-		this.x = x;
-		this.y = y;
 	}
 	
 	public Piece() {
@@ -60,6 +58,11 @@ public abstract class Piece {
 	public int getY() { return y; }
 	public void setX(int x) {this.x = x;}
 	public void setY(int y) { this.y = y;}
+	public void setCords(int x, int y)
+	{
+		this.x = x;
+		this.y = y;
+	}
 	public boolean getHasMoved() { return hasMoved; }
 	public void reset() { hasMoved = false; }
 	
