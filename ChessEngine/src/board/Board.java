@@ -42,11 +42,11 @@ public class Board {
 						else
 							newPiece = new King(isWhite);
 					}
-					
-					board[x][y] = new Square(x,y,newPiece);
+					newPiece.setCords(x, y);
+					board[x][y] = new Square(newPiece);
 				}
 				else
-					board[x][y] = new Square(x,y, null);
+					board[x][y] = new Square(null);
 			}
 		}
 	}

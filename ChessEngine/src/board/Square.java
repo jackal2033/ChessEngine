@@ -17,21 +17,9 @@ public class Square {
 	 */
 	Piece piece;
 	
-	public Square(int x, int y, Piece piece)
+	public Square(Piece piece)
 	{
-		//assigns x/y cords
-		this.x = x;
-		this.y= y;
-		
-		/*
-		 * Ternary operator to Determine which color
-		 * White: X and Y are both even or odd
-		 * Black: one cord is even, other is odd
-		 */
-		this.isWhite = (x % 2 == y % 2)? true : false;
 		this.piece = piece;
-		if (piece != null)
-			this.piece.setCords(x, y);
 	}
 	
 	
