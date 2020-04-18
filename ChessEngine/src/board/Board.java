@@ -106,6 +106,7 @@ public class Board {
 
 	public void setPiece(int x, int y, Piece piece)
 	{
+		piece.setCords(x, y);
 		board[x][y].setPiece(piece);
 	}
 	
