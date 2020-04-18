@@ -33,11 +33,11 @@ public class PawnTests {
 		
 		System.out.println("Testing moving forward one while unimpeded...");
 		//tests moving forward single space
-		result = wPawn.move(board,0,1);
+		result = wPawn.move(board,2,2);
 		output = (result) ? "Passed" : "Failed";
 		System.out.println("White ... " + output);
 		
-		result = bPawn.move(board, 7, 6);
+		result = bPawn.move(board, 2, 5);
 		output = (result) ? "Passed" : "Failed";
 		System.out.println("Black ... " + output);
 		
@@ -48,14 +48,14 @@ public class PawnTests {
 		board.setPiece(2, 2, iPawn);
 		result = wPawn.move(board, 0, 1);
 		output= (result)? "Failed" : "Passed";
-		System.out.println("White ... " + result);
+		System.out.println("White ... " + output);
 		
 
 		iPawn = new Pawn(true, 0 , 1);
 		board.setPiece(0, 1, iPawn);
 		result = wPawn.move(board, 0, 1);
 		output= (result)? "Failed" : "Passed";
-		System.out.println("White ... " + result);
+		System.out.println("White ... " + output);
 		
 		
 		//reset piece to default vales 
