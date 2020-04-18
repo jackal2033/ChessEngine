@@ -9,7 +9,7 @@ import board.Board;
  * @author Chase
  * Contains shared data members and logic for pieces, and allows for overloading
  */
-public class Piece {
+public abstract class Piece {
 	Boolean isWhite;
 	int x,y;
 	Boolean hasMoved = false;
@@ -37,23 +37,26 @@ public class Piece {
 		return "";
 	}
 	
-	public Boolean canMove(Board board, int toX, int toY)
-	{
-		return isWhite == Board.getPiece(toX, toY).getIsWhite();
-	}
+	protected abstract boolean canMove(Board board, int toX, int toY);
 	
 	public Boolean move(Board board, int toX, int toY)
 	{
-		hasMoved = true;
+		if (canMove(board, toX, toY))
+			hasMoved = true;
 		
 		
 		return false;
 	}
 	
 	public Boolean getIsWhite() { return isWhite; }
+	public void setIsWhite(boolean isWhite) { this.isWhite = isWhite; }
 	public int getX() { return x; }
 	public int getY() { return y; }
+	public void setX(int x) {this.x = x;}
+	public void setY(int y) { this.y = y;}
 	public boolean getHasMoved() { return hasMoved; }
+	public void reset() { hasMoved = false; }
+	
 	public boolean equals(Piece checkPiece)
 	{
 		if(checkPiece.getX() == x && checkPiece.getY() == y && checkPiece.getHasMoved() == hasMoved && checkPiece.getIsWhite() == isWhite)

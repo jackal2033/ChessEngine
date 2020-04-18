@@ -15,10 +15,8 @@ public class King extends Piece {
 			return "KI";
 		return "ki";
 	}
-	public Boolean move(Board board, int toX, int toY)
+	public boolean canMove(Board board, int toX, int toY)
 	{
-		hasMoved = true;
-
-		return false;
+		return true;
 	}
 }

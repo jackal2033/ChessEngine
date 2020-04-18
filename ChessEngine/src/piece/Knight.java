@@ -15,9 +15,8 @@ public class Knight extends Piece {
 			return "KN";
 		return "kn";
 	}
-	public Boolean move(Board board, int toX, int toY)
+	public boolean canMove(Board board, int toX, int toY)
 	{
-		hasMoved = true;
-		return false;
+		return true;
 	}
 }

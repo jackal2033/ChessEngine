@@ -14,9 +14,8 @@ public class Queen extends Piece {
 			return "Q";
 		return "q";
 	}
-	public Boolean move(Board board, int toX, int toY)
+	public boolean canMove(Board board, int toX, int toY)
 	{
-		hasMoved = true;
-		return false;
+		return true;
 	}
 }

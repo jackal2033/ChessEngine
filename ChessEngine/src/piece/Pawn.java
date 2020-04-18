@@ -24,7 +24,7 @@ public class Pawn extends Piece {
 		return true;
 	}
 	
-	public Boolean canMove(Board board, int toX, int toY)
+	public boolean canMove(Board board, int toX, int toY)
 	{ 
 		int yMove = Math.abs(y - toY);
 		int xMove = Math.abs(x - toX);
@@ -32,7 +32,7 @@ public class Pawn extends Piece {
 		int diff = (toY > y) ? 1 : -1;
 		//check if range of movement is illegal
 		
-		if (xMove > 2 || yMove > 2)
+		if (xMove > 2 || yMove > 2 || yMove == 0)
 			return false;
 		
 		if (yMove == 2 && hasMoved == true)
@@ -51,7 +51,7 @@ public class Pawn extends Piece {
 			if (Board.getPiece(toX, toY + diff) != null || Board.getPiece(toX, toY + diff + diff) != null  )
 				return false;
 		if (xMove == 1 && yMove == 1)
-				if (isWhite == Board.getPiece(toX, toY).isWhite || Board.getPiece(toX, toY) == null)
+				if (Board.getPiece(toX, toY) == null || isWhite == Board.getPiece(toX, toY).isWhite)
 					return false;
 		return true;
 	}

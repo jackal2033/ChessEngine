@@ -53,6 +53,7 @@ public class Square {
 	public int getY() { return y;}
 
 	public void setPiece(Piece piece) { this.piece = piece; }
+	public void clearPiece() { piece = null; }
 	
 	public String getCords()
 	{
