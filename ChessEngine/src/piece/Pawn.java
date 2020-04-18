@@ -15,15 +15,6 @@ public class Pawn extends Piece {
 		return "p";
 	}
 	
-	public Boolean move(Board board, int toX, int toY)
-	{
-		if (canMove(board, toX, toY) == false)
-			return false;
-		hasMoved = true;
-		
-		return true;
-	}
-	
 	public boolean canMove(Board board, int toX, int toY)
 	{ 
 		int yMove = Math.abs(y - toY);

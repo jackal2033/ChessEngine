@@ -108,4 +108,9 @@ public class Board {
 	{
 		board[x][y].setPiece(piece);
 	}
+	
+	public void clearPiece(int x, int y)
+	{
+		board[x][y].setPiece(null);
+	}
 }

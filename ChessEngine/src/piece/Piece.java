@@ -41,11 +41,17 @@ public abstract class Piece {
 	
 	public Boolean move(Board board, int toX, int toY)
 	{
-		if (canMove(board, toX, toY))
-			hasMoved = true;
+		if (canMove(board, toX, toY) == false)
+			return false;
+		//move before changing hasMoved
+		board.setPiece(toX, toY, this);
+		board.clearPiece(x,y);
 		
+		this.x = toX;
+		this.y = toY;
+		hasMoved = true;
 		
-		return false;
+		return true;
 	}
 	
 	public Boolean getIsWhite() { return isWhite; }

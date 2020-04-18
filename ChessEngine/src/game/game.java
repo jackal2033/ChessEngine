@@ -9,7 +9,6 @@ public class game {
 	static Board board = new Board();
 	public static void main(String[] args)
 	{
-		board.printBoard();
 		runner();
 		System.out.println("program terminated");
 	}
@@ -71,6 +70,7 @@ public class game {
 		Scanner scanner = new Scanner(System.in);
 		while (input.equals("exit") == false)
 		{
+			board.printBoard();
 			System.out.println("fromX,fromY;toX,toY:");
 			input = scanner.nextLine();
 			while (parseCommand(params, input) == false)
