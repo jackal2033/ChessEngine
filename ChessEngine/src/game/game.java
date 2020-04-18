@@ -73,12 +73,12 @@ public class game {
 			board.printBoard();
 			System.out.println("fromX,fromY;toX,toY:");
 			input = scanner.nextLine();
-			while (parseCommand(params, input) == false || Board.getPiece(params[0],params[1]) == null)
-			{
-				System.out.println("incorrect");
-				input = scanner.nextLine();
-			}
 			
+			if (parseCommand(params, input) == false)
+				continue;
+			
+			if (Board.getPiece(params[0],params[1]) == null)
+				continue;
 			if (input.equals("exit")) 
 				continue;
 			fromX = params[0];
