@@ -73,7 +73,7 @@ public class game {
 			board.printBoard();
 			System.out.println("fromX,fromY;toX,toY:");
 			input = scanner.nextLine();
-			while (parseCommand(params, input) == false)
+			while (parseCommand(params, input) == false || Board.getPiece(params[0],params[1]) == null)
 			{
 				System.out.println("incorrect");
 				input = scanner.nextLine();
