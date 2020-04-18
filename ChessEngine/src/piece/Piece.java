@@ -25,15 +25,8 @@ public abstract class Piece {
 	{
 		this.isWhite = isWhite;
 	}
-	
-	public Piece() {
-		// TODO Auto-generated constructor stub
-	}
 
-	public String toString()
-	{
-		return "";
-	}
+	public abstract String toString();
 	
 	protected abstract boolean canMove(Board board, int toX, int toY);
 	
